@@ -3,7 +3,12 @@ LABEL MAINTAINER="Vagner Cardoso <vagnercardosoweb@gmail.com>"
 
 # Environments
 ENV TZ=America/Sao_Paulo
-ENV WORKDIR=/var/www/app.dev
+ENV WORKDIR=/var/www/html
+
+RUN apk add --update curl \
+  curl-dev \
+  php-curl && \
+  rm -rf /var/cache/apk/*
 
 # Updates and installs system dependencies
 RUN apk add --update --no-cache \
@@ -23,6 +28,9 @@ RUN apk add --update --no-cache \
 # Configure php dependency
 RUN docker-php-ext-configure soap --enable-soap
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg
+
+RUN docker-php-ext-install sockets
+RUN docker-php-ext-install curl
 
 # Install php dependencies
 RUN docker-php-ext-install \
