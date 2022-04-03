@@ -1,6 +1,6 @@
 FROM nginx:1.19.7-alpine
 
-ENV TZ=America/Sao_Paulo
+ENV TZ=Asia/Ho_Chi_Minh
 RUN apk add --update --no-cache tzdata
 
 # RUN usermod -u 1000 nginx
