@@ -1,6 +1,6 @@
 FROM httpd:2.4-alpine
 
-ENV TZ=America/Sao_Paulo
+ENV TZ=Asia/Ho_Chi_Minh
 ENV APP_ROOT=/var/www/html
 ENV SERVER_NAME=localhost
 ENV DOCUMENT_ROOT=${APP_ROOT}/public_html
