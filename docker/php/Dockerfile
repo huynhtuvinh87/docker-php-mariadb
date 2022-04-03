@@ -1,8 +1,8 @@
 FROM php:8-fpm-alpine
-LABEL MAINTAINER="Vagner Cardoso <vagnercardosoweb@gmail.com>"
+LABEL MAINTAINER="Vinh Huynh <huynhtuvinh87@gmail.com>"
 
 # Environments
-ENV TZ=America/Sao_Paulo
+ENV TZ=Asia/Ho_Chi_Minh
 ENV WORKDIR=/var/www/html
 
 RUN apk add --update curl \
