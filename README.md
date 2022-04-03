@@ -1,6 +1,7 @@
 # docker-php-mariadb
-# nginx
-# apache
-# mariadb
-# mysql
-# psgsql
+nginx
+apache
+php
+mariadb
+mysql
+psgsql
